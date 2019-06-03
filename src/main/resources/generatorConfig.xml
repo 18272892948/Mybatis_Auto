@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="testTables" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://39.96.93.180:3306/alsapp" userId="root"
+			password="123">
+		</jdbcConnection>
+
+		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 
+			和 NUMERIC 类型解析为java.math.BigDecimal -->
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- targetProject:生成PO类的位置 -->
+		<javaModelGenerator targetPackage="com.qfedu.entity"
+			targetProject=".\src">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+			<!-- 从数据库返回的值被清理前后的空格 -->
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- targetProject:mapper映射文件生成的位置 -->
+		<sqlMapGenerator targetPackage="com.qfedu.mapper"
+			targetProject=".\src">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+		<!-- targetPackage：mapper接口生成的位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.qfedu.dao" targetProject=".\src">
+			<!-- enableSubPackages:是否让schema作为包的后缀 -->
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		<!-- 指定数据库表 -->
+		<!--<table tableName="t_user" domainObjectName="User" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_userlog" domainObjectName="UserLog" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_user" domainObjectName="User" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_log" domainObjectName="Log" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_quest" domainObjectName="Quest" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_usercollect" domainObjectName="UserCollect" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_admin" domainObjectName="Admin" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_role" domainObjectName="Role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_permission" domainObjectName="Permission" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_adminrole" domainObjectName="AdminRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_roleper" domainObjectName="RolePer" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_product" domainObjectName="Product" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_prodetail" domainObjectName="ProductDetail" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_propricesku" domainObjectName="ProPriceSKU" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_repsku" domainObjectName="RepSKU" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_prosku" domainObjectName="ProSKU" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_promedia" domainObjectName="ProMedia" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_prolog" domainObjectName="ProLog" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_protype" domainObjectName="ProType" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_brand" domainObjectName="Brand" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_role" domainObjectName="Role" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_adminrole" domainObjectName="AdminRole" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_permission" domainObjectName="Permission" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+		<!--<table tableName="t_rolepermission" domainObjectName="RolePermission" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>-->
+<!--
+
+		<table tableName="a_user" domainObjectName="AUser" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>
+		<table tableName="a_user_message" domainObjectName="AUserMessage" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>
+		<table tableName="a_user_addr" domainObjectName="AUserAddr" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>
+-->
+		<table tableName="a_cart" domainObjectName="ACart" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false" ></table>
+	</context>
+</generatorConfiguration>
